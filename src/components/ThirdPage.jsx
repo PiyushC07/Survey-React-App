@@ -53,6 +53,16 @@ export class ThirdPage extends Component {
       this.continue();
     }
   };
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  componentDidMount(){
+    this.scrollToTop();
+  }
 
   render() {
     const styles = {
