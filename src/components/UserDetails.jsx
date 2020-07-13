@@ -65,6 +65,16 @@ export class UserDetails extends Component {
     this.props.nextStep();
   };
 
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  componentDidMount(){
+    this.scrollToTop();
+  }
   render() {
     const styles = {
       white: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
