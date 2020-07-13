@@ -13,6 +13,16 @@ export class Confirm extends Component {
     e.preventDefault();
     this.props.nextStep();
   };
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  componentDidMount(){
+    this.scrollToTop();
+  }
 
   render() {
     const { values } = this.props;
