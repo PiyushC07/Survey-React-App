@@ -91,8 +91,8 @@ export class UserDetails extends Component {
               position: "relative",
             }}
           >
-            <h2>You are one step away from seeing your Quiz Score!</h2>
-            <form onSubmit={this.handleSubmit} autoComplete="off">
+            <h2 className="title">You are one step away from seeing your Quiz Score!</h2>
+            <form className="textfield" onSubmit={this.handleSubmit} autoComplete="off">
               <TextField
                 required
                 id="standard-required"

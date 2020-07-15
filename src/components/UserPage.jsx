@@ -139,7 +139,7 @@ export class UserPage extends Component {
     };
     return(
       <div>
-      <div style={{paddingLeft:'25%'}}>
+      <div style={{paddingLeft:'12%'}}>
    <Stepper style={{width:'60%',color:'#00bcd4'}} activeStep={step-1} orientation="horizontal">
      <Step>
        <StepLabel>
