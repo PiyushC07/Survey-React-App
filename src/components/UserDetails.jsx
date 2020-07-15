@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import RaisedButton from "material-ui/RaisedButton";
+import Button from "@material-ui/core/Button";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 
@@ -13,7 +13,7 @@ import TextField from "material-ui/TextField";
 // };
 
 export class UserDetails extends Component {
-//   state = intialState;
+  //   state = intialState;
 
   //     validate = () => {
   //       let  nameError="";
@@ -68,11 +68,11 @@ export class UserDetails extends Component {
   scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.scrollToTop();
   }
   render() {
@@ -84,41 +84,6 @@ export class UserDetails extends Component {
     return (
       <>
         <MuiThemeProvider>
-          <div class="md-stepper-horizontal orange">
-            <div class="md-step active ">
-              <div class="md-step-circle">
-                <span>1</span>
-              </div>
-              {/* <div class="md-step-title">Part 1</div> */}
-              <div class="md-step-bar-left"></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-            <div class="md-step active ">
-              <div class="md-step-circle">
-                <span>2</span>
-              </div>
-              {/* <div class="md-step-title">Part 2</div> */}
-              <div class="md-step-bar-left"></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-            <div class="md-step active ">
-              <div class="md-step-circle">
-                <span>3</span>
-              </div>
-              {/* <div class="md-step-title">Part 3</div> */}
-              <div class="md-step-bar-left"></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-            <div class="md-step active">
-              <div class="md-step-circle">
-                <span>4</span>
-              </div>
-              {/* <div class="md-step-title">User Details</div> */}
-              <div class="md-step-bar-left"></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-          </div>
-
           <div
             style={{
               backgroundColor: styles.black(0.05),
@@ -132,7 +97,6 @@ export class UserDetails extends Component {
                 required
                 id="standard-required"
                 error
-                
                 hinttext="Enter your Full name"
                 floatingLabelText="Full Name"
                 onChange={handleChange("FullName")}
@@ -155,7 +119,6 @@ export class UserDetails extends Component {
                 required
                 id="standard-required"
                 error
-                
                 floatingLabelText="Role"
                 onChange={handleChange("Role")}
                 defaultValue={values.Role}
@@ -173,10 +136,10 @@ export class UserDetails extends Component {
               </div> */}
               <br />
               <TextField
+                
                 required
                 id="standard-required"
                 error
-                
                 type="email"
                 floatingLabelText="Business E-mail"
                 onChange={handleChange("Email")}
@@ -196,18 +159,26 @@ export class UserDetails extends Component {
               </div> */}
               <br />
               <br />
-              <RaisedButton
-                primary={false}
-                onClick={this.back}
-                label="Previous"
-                style={buttonStyle.button}
-              />
-              <RaisedButton
-                type="submit"
-                primary={true}
-                label="Next"
-                style={buttonStyle.button}
-              />
+              <Button
+                  
+                  color="default"
+                  variant="contained"
+                  primary={false}
+                  onClick={this.back}
+                  style={styles1.button}
+                >
+                  Previous
+                </Button>
+
+<Button
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  primary={true}
+                  style={styles1.button}
+                >
+                  Next
+                </Button>
             </form>
           </div>
         </MuiThemeProvider>
@@ -216,7 +187,7 @@ export class UserDetails extends Component {
   }
 }
 
-const buttonStyle = {
+const styles1 = {
   button: {
     margin: 15,
   },

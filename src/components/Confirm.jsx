@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import RaisedButton from "material-ui/RaisedButton";
+import Button from "@material-ui/core/Button";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 // import TextField from "material-ui/TextField";
 import { List,ListItem } from 'material-ui/List'
@@ -84,25 +84,34 @@ export class Confirm extends Component {
              />
          </List>
           <br />
-          <RaisedButton
-            primary={false}
-            onClick={this.back}
-            label="Previous"
-            style={styles.button}
-          />
-          <RaisedButton
-            primary={true}
-            onClick={this.continue}
-            label="Save & Continue"
-            style={styles.button}
-          />
+          <Button
+                  
+                  color="default"
+                  variant="contained"
+                  primary={false}
+                  onClick={this.back}
+                  style={styles1.button}
+                >
+                  Previous
+                </Button>
+
+<Button
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  primary={true}
+                  onClick={this.continue}
+                  style={styles1.button}
+                >
+                  Save & Continue
+                </Button>
         </MuiThemeProvider>
       </>
     );
   }
 }
 
-const styles = {
+const styles1 = {
   button: {
     margin: 15,
   },

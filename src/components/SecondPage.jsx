@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import RaisedButton from "material-ui/RaisedButton";
+import Button from "@material-ui/core/Button";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
@@ -83,40 +83,7 @@ export class SecondPage extends Component {
     return (
       <>
         <MuiThemeProvider>
-          <div class="md-stepper-horizontal orange">
-            <div class="md-step active ">
-              <div class="md-step-circle">
-                <span>1</span>
-              </div>
-              {/* <div class="md-step-title">Part 1</div> */}
-              <div class="md-step-bar-left "></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-            <div class="md-step active ">
-              <div class="md-step-circle">
-                <span>2</span>
-              </div>
-              {/* <div class="md-step-title">Part 2</div> */}
-              <div class="md-step-bar-left"></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-            <div class="md-step ">
-              <div class="md-step-circle">
-                <span>3</span>
-              </div>
-              {/* <div class="md-step-title">Part 3</div> */}
-              <div class="md-step-bar-left"></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-            <div class="md-step">
-              <div class="md-step-circle">
-                <span>4</span>
-              </div>
-              {/* <div class="md-step-title">User Details</div> */}
-              <div class="md-step-bar-left"></div>
-              <div class="md-step-bar-right"></div>
-            </div>
-          </div>
+         
 
           <div
             style={{
@@ -296,19 +263,26 @@ export class SecondPage extends Component {
                 </RadioGroup>
 
                 <br />
-                <RaisedButton
+                <Button
+                  
+                  color="default"
+                  variant="contained"
                   primary={false}
                   onClick={this.back}
-                  label="Previous"
-                  style={buttonStyle.button}
-                />
+                  style={styles1.button}
+                >
+                  Previous
+                </Button>
 
-                <RaisedButton
+<Button
                   type="submit"
+                  color="primary"
+                  variant="contained"
                   primary={true}
-                  label="Next"
-                  style={buttonStyle.button}
-                />
+                  style={styles1.button}
+                >
+                  Next
+                </Button> 
               </div>
             </form>
           </div>
@@ -318,10 +292,11 @@ export class SecondPage extends Component {
   }
 }
 
-const buttonStyle = {
+const styles1 = {
   button: {
     margin: 15,
   },
 };
+
 
 export default SecondPage;

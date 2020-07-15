@@ -5,6 +5,10 @@ import ThirdPage from "./ThirdPage";
 import UserDetails from "./UserDetails";
 import Confirm from "./Confirm";
 import Success  from "./Success";
+import { Stepper, StepLabel, Step } from '@material-ui/core';
+
+
+
 
 export class UserPage extends Component {
   state = {
@@ -23,6 +27,61 @@ export class UserPage extends Component {
     Question9: "",
     Question10: "",
   };
+
+
+  showStep = (step,values) => {
+    switch (step) {
+      case 1:
+        return (
+          <FirstPage
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            onValueChange={this.onValueChange}
+            values={values}
+          />
+        );
+      case 2:
+        return (
+          <SecondPage
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            prevStep={this.prevStep}
+            values={values}
+          />
+        );
+      case 3:
+        return (
+          <ThirdPage
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            prevStep={this.prevStep}
+            values={values}
+          />
+        );
+      case 4:
+        return (
+          <UserDetails
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            prevStep={this.prevStep}
+            values={values}
+          />
+        );
+      case 5:
+        return (
+          <Confirm
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            values={values}
+          />
+        );
+        case 6 :
+            return(
+                <Success/>
+            )
+      default:
+    }
+  }
   //Proceed to next step
   nextStep = () => {
     const { step } = this.state;
@@ -78,58 +137,43 @@ export class UserPage extends Component {
       Question9,
       Question10,
     };
+    return(
+      <div>
+      <div style={{paddingLeft:'25%'}}>
+   <Stepper style={{width:'60%',color:'#00bcd4'}} activeStep={step-1} orientation="horizontal">
+     <Step>
+       <StepLabel>
 
-    switch (step) {
-      case 1:
-        return (
-          <FirstPage
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            onValueChange={this.onValueChange}
-            values={values}
-          />
-        );
-      case 2:
-        return (
-          <SecondPage
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            prevStep={this.prevStep}
-            values={values}
-          />
-        );
-      case 3:
-        return (
-          <ThirdPage
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            prevStep={this.prevStep}
-            values={values}
-          />
-        );
-      case 4:
-        return (
-          <UserDetails
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            prevStep={this.prevStep}
-            values={values}
-          />
-        );
-      case 5:
-        return (
-          <Confirm
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            values={values}
-          />
-        );
-        case 6 :
-            return(
-                <Success/>
-            )
-      default:
-    }
+       </StepLabel>
+     </Step>
+     <Step>
+       <StepLabel>
+         
+       </StepLabel>
+     </Step>
+     <Step>
+       <StepLabel>
+         
+       </StepLabel>
+     </Step>
+     <Step>
+       <StepLabel>
+         
+       </StepLabel>
+     </Step>
+     <Step>
+       <StepLabel>
+         
+       </StepLabel>
+     </Step>
+     
+   </Stepper>
+   </div>
+ 
+    {this.showStep(step,values)};
+  </div>
+    );
+
   }
 }
 
