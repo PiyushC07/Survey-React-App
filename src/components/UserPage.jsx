@@ -170,7 +170,7 @@ export class UserPage extends Component {
    </Stepper>
   
  
-    {this.showStep(step,values)};
+    {this.showStep(step,values)}
   </div>
     );
 
