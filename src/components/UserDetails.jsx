@@ -76,22 +76,15 @@ export class UserDetails extends Component {
     this.scrollToTop();
   }
   render() {
-    const styles = {
-      white: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-      black: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-    };
+   
     const { values, handleChange } = this.props;
     return (
       <>
         <MuiThemeProvider>
           <div
-            style={{
-              backgroundColor: styles.black(0.05),
-              minHeight: "90vh",
-              position: "relative",
-            }}
+           className="main"
           >
-            <h2 className="title">You are one step away from seeing your Quiz Score!</h2>
+            <h2 className="userdetailstitle">You are one step away from seeing your Quiz Score!</h2>
             <form className="textfield" onSubmit={this.handleSubmit} autoComplete="off">
               <TextField
                 required

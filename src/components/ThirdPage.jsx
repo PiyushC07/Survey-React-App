@@ -65,10 +65,7 @@ export class ThirdPage extends Component {
   }
 
   render() {
-    const styles = {
-      white: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-      black: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-    };
+   
     const { values, handleChange } = this.props;
     return (
       <>
@@ -76,14 +73,11 @@ export class ThirdPage extends Component {
           
 
           <div
-            style={{
-              backgroundColor: styles.black(0.05),
-              minHeight: "90vh",
-              position: "relative",
-            }}
+          className="main"
           >
           <form onSubmit={this.handleSubmit}>
             <h2 className="title">Part 3: Strategic Insight (3 Questions)</h2>
+            <br/>
             <p className="para" style={{ color: "#2e4169" }}>
               Long-term engagements are defined by value creation and that is
               possible only when strategic goals are
@@ -98,9 +92,8 @@ export class ThirdPage extends Component {
             <div
               style={{
                 color: "red",
-                textAlign: "left",
-                paddingLeft: "15%",
-                paddingTop: "5px",
+                      textAlign: "left",
+                      paddingLeft:"10px",
               }}
             >
               {" "}
@@ -137,9 +130,8 @@ export class ThirdPage extends Component {
             <div
               style={{
                 color: "red",
-                textAlign: "left",
-                paddingLeft: "15%",
-                paddingTop: "5px",
+                      textAlign: "left",
+                      paddingLeft:"10px",
               }}
             >
            
@@ -180,9 +172,8 @@ export class ThirdPage extends Component {
             <div
               style={{
                 color: "red",
-                textAlign: "left",
-                paddingLeft: "15%",
-                paddingTop: "5px",
+                      textAlign: "left",
+                      paddingLeft:"10px",
               }}
             >
               {" "}

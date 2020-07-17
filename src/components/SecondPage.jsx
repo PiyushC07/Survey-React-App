@@ -75,10 +75,7 @@ export class SecondPage extends Component {
   }
 
   render() {
-    const styles = {
-      white: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-      black: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-    };
+  
     const { values, handleChange } = this.props;
     return (
       <>
@@ -86,17 +83,14 @@ export class SecondPage extends Component {
          
 
           <div
-            style={{
-              backgroundColor: styles.black(0.05),
-              minHeight: "100vh",
-              //   position: "relative",
-            }}
+         
           >
             <form onSubmit={this.handleSubmit}>
-              <div class="container">
+              <div className="main">
                 <h2 className="title">
                   Part 2: Relationship Strength (2 Questions)
                 </h2>
+                <br/>
                 <p className="para" style={{ color: "#2e4169" }}>
                   Knowing where your current relationship is categorized helps
                   you trigger a forward action plan for
@@ -113,9 +107,8 @@ export class SecondPage extends Component {
                 <div
                   style={{
                     color: "red",
-                    textAlign: "left",
-                    paddingLeft: "15%",
-                    paddingTop: "5px",
+                      textAlign: "left",
+                      paddingLeft:"10px",
                   }}
                 >
                   {" "}
@@ -160,9 +153,8 @@ export class SecondPage extends Component {
                 <div
                   style={{
                     color: "red",
-                    textAlign: "left",
-                    paddingLeft: "15%",
-                    paddingTop: "5px",
+                      textAlign: "left",
+                      paddingLeft:"10px",
                   }}
                 >
                   {" "}
@@ -197,9 +189,8 @@ export class SecondPage extends Component {
                 <div
                   style={{
                     color: "red",
-                    textAlign: "left",
-                    paddingLeft: "15%",
-                    paddingTop: "5px",
+                      textAlign: "left",
+                      paddingLeft:"10px",
                   }}
                 >
                   {" "}
@@ -233,9 +224,8 @@ export class SecondPage extends Component {
                 <div
                   style={{
                     color: "red",
-                    textAlign: "left",
-                    paddingLeft: "15%",
-                    paddingTop: "5px",
+                      textAlign: "left",
+                      paddingLeft:"10px",
                   }}
                 >
                   {" "}

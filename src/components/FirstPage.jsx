@@ -62,27 +62,21 @@ export class FirstPage extends Component {
   }
 
   render() {
-    const styles = {
-      white: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-      black: (opacity = 0) => `rgba(255, 255, 255, ${opacity})`,
-    };
+    
     const { values, handleChange } = this.props;
     return (
       <>
         <MuiThemeProvider>
           <div
-            style={{
-              backgroundColor: styles.black(0.05),
-              minHeight: "90vh",
-              // position: "relative",
-            }}
+           
           >
-            <div>
+            <div className="main">
               <form onSubmit={this.handleSubmit}>
                 <h2 className="title">
                   Part 1: Whitespace & Opportunity Awareness (3 Questions)
                 </h2>
-                <div className="container">
+<br/>
+                <div>
                   <p className="para" style={{ color: "#2e4169" }}>
                     Your B2B key accounts are typically large, complex, global
                     accounts with multiple ‘buying units.Usually a function,
@@ -99,11 +93,11 @@ export class FirstPage extends Component {
                     style={{
                       color: "red",
                       textAlign: "left",
-                      paddingLeft: "15%",
-                      paddingTop: "5px",
+                      paddingLeft:"10px",
+
                     }}
                   >
-                    {" "}
+            
                     {this.state.Question1Error}
                   </div>
                   <RadioGroup
@@ -146,11 +140,10 @@ export class FirstPage extends Component {
                     style={{
                       color: "red",
                       textAlign: "left",
-                      paddingLeft: "15%",
-                      paddingTop: "5px",
+                      paddingLeft:"10px",
                     }}
                   >
-                    {" "}
+                
                     {this.state.Question2Error}
                   </div>
                   <RadioGroup
@@ -194,11 +187,10 @@ export class FirstPage extends Component {
                     style={{
                       color: "red",
                       textAlign: "left",
-                      paddingLeft: "15%",
-                      paddingTop: "5px",
+                      paddingLeft:"10px",
                     }}
                   >
-                    {" "}
+                   
                     {this.state.Question3Error}
                   </div>
                   <RadioGroup
@@ -241,7 +233,7 @@ export class FirstPage extends Component {
           </div>
         </MuiThemeProvider>
       </>
-    );
+    )
   }
 }
 

@@ -138,9 +138,9 @@ export class UserPage extends Component {
       Question10,
     };
     return(
-      <div>
-      <div style={{paddingLeft:'12%'}}>
-   <Stepper style={{width:'60%',color:'#00bcd4'}} activeStep={step-1} orientation="horizontal">
+    
+      <div >
+   <Stepper className="main-stepper"  activeStep={step-1} orientation="horizontal">
      <Step>
        <StepLabel>
 
@@ -168,7 +168,7 @@ export class UserPage extends Component {
      </Step>
      
    </Stepper>
-   </div>
+  
  
     {this.showStep(step,values)};
   </div>

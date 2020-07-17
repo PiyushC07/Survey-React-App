@@ -29,6 +29,9 @@ export class Confirm extends Component {
     return (
       <>
         <MuiThemeProvider>
+        <div  className="main">
+
+       
          <List>
              <ListItem 
                  primaryText="Full Name"
@@ -105,6 +108,7 @@ export class Confirm extends Component {
                 >
                   Save & Continue
                 </Button>
+                </div>
         </MuiThemeProvider>
       </>
     );
